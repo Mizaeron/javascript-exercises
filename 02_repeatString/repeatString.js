@@ -1,11 +1,16 @@
 const repeatString = function(string, times) {   
     let result = "";
-  for (let i = 0; i < times; i++) {
-   result = result + string;
+if (times >= 0) {
+    for (let i = 0; i < times; i++) {
+        result = result + string;
+    }
+  return result;
+  } else {
+    return "ERROR";
   }
 
-  return result;
-    };
+  
+};
 
 
 
@@ -13,7 +18,6 @@ const repeatString = function(string, times) {
 
 
 
-console.log(repeatString("hey", 3));
-
+console.log(repeatString("goodbye", -1));
 // Do not edit below this line
 module.exports = repeatString;
